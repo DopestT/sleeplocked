@@ -1,0 +1,216 @@
+.app-shell {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  color: #f4f2fb;
+}
+
+.app-shell canvas {
+  position: absolute;
+  inset: 0;
+}
+
+.app-header {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 22px 28px;
+  pointer-events: none;
+  z-index: 5;
+}
+
+.app-header h1 {
+  margin: 0;
+  font-size: 22px;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  text-shadow: 0 2px 18px rgba(124, 58, 237, 0.6);
+  pointer-events: auto;
+}
+
+.app-header h1 span {
+  background: linear-gradient(120deg, #a855f7, #38bdf8);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.panel-toggle {
+  pointer-events: auto;
+}
+
+.control-panel {
+  position: absolute;
+  left: 50%;
+  bottom: 22px;
+  transform: translateX(-50%);
+  z-index: 5;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 18px;
+  align-items: flex-start;
+  max-width: min(920px, calc(100vw - 32px));
+  padding: 18px 22px;
+  border-radius: 20px;
+  background: rgba(18, 16, 28, 0.55);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.45);
+  backdrop-filter: blur(18px);
+  -webkit-backdrop-filter: blur(18px);
+}
+
+.panel-section {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  min-width: 180px;
+}
+
+.panel-section--row {
+  flex-direction: row;
+  align-items: center;
+  gap: 16px;
+}
+
+.panel-label {
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 1.1px;
+  color: rgba(244, 242, 251, 0.55);
+}
+
+.dropzone {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 14px;
+  border-radius: 12px;
+  border: 1px dashed rgba(255, 255, 255, 0.25);
+  cursor: pointer;
+  font-size: 13.5px;
+  color: rgba(244, 242, 251, 0.85);
+  transition: border-color 0.15s ease, background 0.15s ease;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 260px;
+}
+
+.dropzone:hover {
+  border-color: rgba(168, 85, 247, 0.6);
+}
+
+.dropzone--active {
+  border-color: #a855f7;
+  background: rgba(168, 85, 247, 0.12);
+}
+
+.dropzone-icon {
+  font-size: 16px;
+  color: #a855f7;
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  opacity: 0;
+}
+
+.button-row {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.btn {
+  padding: 8px 14px;
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  background: rgba(255, 255, 255, 0.06);
+  color: #f4f2fb;
+  cursor: pointer;
+  font-size: 13px;
+  font-weight: 500;
+  transition: transform 0.1s ease, background 0.15s ease, border-color 0.15s ease;
+  white-space: nowrap;
+}
+
+.btn:hover {
+  background: rgba(255, 255, 255, 0.12);
+  border-color: rgba(168, 85, 247, 0.5);
+}
+
+.btn:active {
+  transform: scale(0.97);
+}
+
+.btn--ghost {
+  background: transparent;
+}
+
+.btn--icon {
+  flex-shrink: 0;
+}
+
+.error-text {
+  margin: 0;
+  font-size: 12px;
+  color: #fb7185;
+  max-width: 260px;
+}
+
+.preset-row {
+  display: flex;
+  gap: 6px;
+}
+
+.preset-btn {
+  padding: 7px 12px;
+  border-radius: 9px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  background: rgba(255, 255, 255, 0.04);
+  color: rgba(244, 242, 251, 0.75);
+  font-size: 12.5px;
+  cursor: pointer;
+  transition: all 0.15s ease;
+  white-space: nowrap;
+}
+
+.preset-btn--active {
+  background: linear-gradient(120deg, rgba(168, 85, 247, 0.35), rgba(56, 189, 248, 0.35));
+  border-color: rgba(168, 85, 247, 0.6);
+  color: #fff;
+}
+
+.slider-block {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  min-width: 140px;
+}
+
+.slider-block input[type="range"] {
+  width: 100%;
+  accent-color: #a855f7;
+}
+
+@media (max-width: 640px) {
+  .app-header h1 {
+    font-size: 18px;
+  }
+  .control-panel {
+    bottom: 12px;
+    padding: 14px 16px;
+    gap: 12px;
+  }
+  .dropzone {
+    max-width: 200px;
+  }
+}
