@@ -1,0 +1,17 @@
+export const SUGGESTED_TAGS = [
+  "flying",
+  "falling",
+  "chased",
+  "water",
+  "school",
+  "family",
+  "lost",
+  "late",
+  "teeth",
+  "flying-object",
+  "animal",
+  "stranger",
+  "ex",
+  "death",
+  "house",
+];

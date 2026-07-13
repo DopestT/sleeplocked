@@ -1,0 +1,21 @@
+{
+  "expo": {
+    "name": "Dream Journal",
+    "slug": "dream-journal",
+    "version": "0.1.0",
+    "orientation": "portrait",
+    "userInterfaceStyle": "dark",
+    "scheme": "dreamjournal",
+    "assetBundlePatterns": ["**/*"],
+    "ios": {
+      "supportsTablet": false,
+      "bundleIdentifier": "com.sleeplocked.dreamjournal"
+    },
+    "android": {
+      "package": "com.sleeplocked.dreamjournal"
+    },
+    "web": {
+      "bundler": "metro"
+    }
+  }
+}
