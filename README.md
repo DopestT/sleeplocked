@@ -71,3 +71,12 @@ src/
     ControlPanel.tsx        # upload/mic/preset/sensitivity/fullscreen UI
   App.tsx, App.css, index.css
 ```
+
+## Also in this repo
+
+[`dream-journal/`](./dream-journal) is a second, independent app: a mobile
+(Expo/React Native) dream journal that generates a visual scene per dream
+entry and charts mood/tag/sleep-quality patterns over time. It's a
+different interpretation of "Dream Visualizer" built in parallel, kept
+alongside this one rather than merged into it since the two don't share a
+stack. See its own README for details.
